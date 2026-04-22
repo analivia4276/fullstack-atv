@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+:root {
+  --rosa: #ff80ab;
+  --verde: #4caf50;
+  --branco: #ffffff;
+  --cinza: rgba(0,0,0,0.6);
+}
+
+body {
+  background-color: var(--branco);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: var(--rosa);
+  color: var(--branco);
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+main {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow-y: auto;
+}
+
+.card {
+  background-color: var(--verde);
+  width: 250px;
+  margin: 20px;
+  padding: 15px;
+  border-radius: 10px;
+  color: var(--branco);
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  cursor: pointer;
+}
+
+.card img {
+  width: 100%;
+  height: 220px;         
+  object-fit: cover;     
+  object-position: center;
+  border-radius: 8px;
+  margin-bottom: 10px;  
+  transition: transform 0.3s ease;
+  background-color: var(--branco); 
+  padding: 1px;         
+}
+
+.card img:hover {
+  transform: scale(1.05); 
+}
+
+button {
+  background-color: var(--rosa);
+  color: var(--branco);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #e91e63;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.janela {
+  background-color: var(--branco);
+  width: 400px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.oculto {
+  display: none;
+}
+
+#cadastro .janela {
+  background: #fff;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  max-width: 420px;
+  width: 100%;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+#cadastro h2 {
+  text-align: center;
+  color: var(--rosa);
+  margin-bottom: 20px;
+  font-size: 1.4rem;
+}
+
+#cadastro label {
+  font-weight: bold;
+  margin-top: 10px;
+  color: #444;
+  display: block;
+}
+
+#cadastro input,
+#cadastro select,
+#cadastro textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+#cadastro .form-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+#cadastro .form-actions button {
+  flex: 1;
+  margin: 0 5px;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+#cadastro .form-actions button:first-child {
+  background: var(--rosa);
+  color: white;
+}
+
+#cadastro .form-actions .btn-cancel {
+  background: #ccc;
+  color: #333;
+}
+
+#cadastro .form-actions button:hover {
+  opacity: 0.85;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
