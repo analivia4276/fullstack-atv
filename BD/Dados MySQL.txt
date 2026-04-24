@@ -1,0 +1,32 @@
+Dados MySQL 
+
+CREATE DATABASE loja_flores;
+USE loja_flores;
+
+CREATE TABLE produtos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100),
+    imagem VARCHAR(255),
+    preco DECIMAL(10,2),
+    categoria VARCHAR(50),
+    marca VARCHAR(100)
+);
+
+INSERT INTO produtos (id, nome, imagem, preco, categoria, marca) VALUES
+(13, 'Buquê de Rosas', 'http://localhost:3000/assets/rosas.jpg', 120.00, 'Buquê', 'Interflora'),
+(14, 'Girassol', 'http://localhost:3000/assets/girassol.jpg', 29.90, 'Flor', 'Interflora'),
+(15, 'Orquídea', 'https://m.media-amazon.com/images/I/81vGQ9OxctL.jpg', 79.90, 'Vaso', 'Interflora'),
+(16, 'Lírios', 'http://localhost:3000/assets/lirios.jpg', 110.90, 'Buquê', 'Interflora'),
+(17, 'Tulipas', 'http://localhost:3000/assets/tulipas.jpg', 64.90, 'Buquê', 'Interflora'),
+(18, 'Lavanda', 'http://localhost:3000/assets/lavanda.jpg', 39.90, 'Vaso', 'Interflora'),
+(19, 'Brinco de Princesa', 'http://localhost:3000/assets/brincodeprincesa.jpg', 89.90, 'muda', 'Interflora'),
+(20, 'Anturio', 'http://localhost:3000/assets/anturio.jpg', 99.90, 'Buquê', 'Interflora'),
+(22, 'Margaridas', 'http://localhost:3000/assets/margaridas.jpg', 95.90, 'Flor', 'Interflora'),
+(23, 'Cattleya', 'https://www.ocotea.net.br/storage/2025/02/cattleya.jpg', 22.00, 'Flor', 'Interflora');
+
+Teste Insomnia
+
+GET: Listar Produtos - http://localhost:3000/produtos
+POST: Cadastrar Produtos - http://localhost:3000/produtos
+PUT: Atualizar Produtos - http://localhost:3000/produtos/13
+DEL: Excluir Produtos - http://localhost:3000/produtos/13
